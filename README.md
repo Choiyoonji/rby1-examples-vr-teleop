@@ -167,7 +167,7 @@ builder = (
 ```
 
 - **Stiffness**: Joint impedance gain
-- **Torque Limit**: Safety cap to avoid overexertion
+- **Torque Limit**: Prevents the robot from exerting excessive force
 - **Joint Limit**: Motion boundaries per joint
 - **Target**: Pose to reach in Cartesian space 
 
