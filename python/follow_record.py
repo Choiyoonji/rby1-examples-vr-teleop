@@ -1,3 +1,10 @@
+"""
+python follow_record.py \
+  --local_ip 127.0.0.1 --local_port 6001 \
+  --control_ip 127.0.0.1 --control_port 6002 \
+  --rby1 192.168.30.1:50051 --rby1_model a
+"""
+
 import argparse
 import logging
 import zmq
@@ -11,8 +18,8 @@ import json
 import numpy as np
 from scipy.spatial.transform import Rotation as R, Slerp
 from gripper import Gripper
-from vr_control_state import VRControlState
 import pickle
+from control_state import ControlState
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)-8s - %(message)s"
@@ -34,8 +41,10 @@ class Settings:
     T_hand_offset = np.identity(4)
     T_hand_offset[0:3, 3] = hand_offset
 
-    vr_control_local_port: int = 5005
-    vr_control_meta_quest_port: int = 6000
+    local_ip = "127.0.0.1"
+    local_port = 5555
+    control_ip = "127.0.0.1"
+    control_port = 5556
 
     mobile_linear_acceleration_gain: float = 0.15
     mobile_angular_acceleration_gain: float = 0.15
@@ -45,20 +54,12 @@ class Settings:
 
 class SystemContext:
     robot_model: Union[rby.Model_A, rby.Model_M] = None
-    vr_state: VRControlState = VRControlState()
-
-
-def open_zmq_pub_socket(bind_address: str) -> zmq.Socket:
-    context = zmq.Context()
-    socket = context.socket(zmq.PUB)
-    socket.bind(bind_address)
-    logging.info(f"ZMQ PUB server opened at {bind_address}")
-    return socket
+    control_state = ControlState()
 
 
 def robot_state_callback(robot_state: rby.RobotState_A):
-    SystemContext.vr_state.joint_positions = robot_state.position
-    SystemContext.vr_state.center_of_mass = robot_state.center_of_mass
+    SystemContext.control_state.joint_positions = robot_state.position
+    SystemContext.control_state.center_of_mass = robot_state.center_of_mass
 
 
 def connect_rby1(address: str, model: str = "a", no_head: bool = False):
@@ -69,6 +70,7 @@ def connect_rby1(address: str, model: str = "a", no_head: bool = False):
     if not connected:
         logging.critical("Failed to connect to RB-Y1. Exiting program.")
         exit(1)
+
     logging.info("Successfully connected to RB-Y1.")
 
     servo_pattern = "^(?!head_).*" if no_head else ".*"
@@ -111,46 +113,27 @@ def connect_rby1(address: str, model: str = "a", no_head: bool = False):
     return robot
 
 
-def setup_meta_quest_udp_communication(local_ip: str, local_port: int, meta_quest_ip: str, meta_quest_port: int,
-                                       power_off=None):
-    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:
-        target_info = {
-            "ip": local_ip,
-            "port": local_port
-        }
-        message = json.dumps(target_info).encode('utf-8')
-        sock.sendto(message, (meta_quest_ip, meta_quest_port))
-        logging.info(f"Sent local PC info to Meta Quest: {target_info}")
-
+def setup_command_udp_receiver(local_ip: str, local_port: int, power_off=None):
+    """외부 파이썬 컨트롤러가 보내는 JSON 명령을 수신한다."""
     def udp_server():
         with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as server_sock:
+            server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             server_sock.bind((local_ip, local_port))
-            logging.info(f"UDP server running to receive Meta Quest Controller data... {local_ip}:{local_port}")
+            logging.info(f"[RX] UDP listening for controller commands at {local_ip}:{local_port}")
+
             while True:
                 data, addr = server_sock.recvfrom(4096)
                 udp_msg = data.decode('utf-8')
                 try:
-                    SystemContext.vr_state.controller_state = json.loads(udp_msg)
-                    if "left" in SystemContext.vr_state.controller_state["hands"]:
-                        buttons = SystemContext.vr_state.controller_state["hands"]["left"]["buttons"]
-                        primary_button = buttons["primaryButton"]
-                        secondary_button = buttons["secondaryButton"]
+                    SystemContext.control_state.command = json.loads(udp_msg)
+                    SystemContext.control_state.ready = SystemContext.control_state.command.get("ready", False)
+                    SystemContext.control_state.move = SystemContext.control_state.command.get("move", False)
+                    SystemContext.control_state.stop = SystemContext.control_state.command.get("stop", False)
 
-                        SystemContext.vr_state.event_left_a_pressed |= primary_button
-                        SystemContext.vr_state.event_left_b_pressed |= secondary_button
-
-                        if primary_button:
-                            if power_off is not None:
-                                logging.warning("Left X button pressed. Shutting down power.")
-                                power_off()
-
-                    if "right" in SystemContext.vr_state.controller_state["hands"]:
-                        buttons = SystemContext.vr_state.controller_state["hands"]["right"]["buttons"]
-                        primary_button = buttons["primaryButton"]
-                        secondary_button = buttons["secondaryButton"]
-
-                        SystemContext.vr_state.event_right_a_pressed |= primary_button
-                        SystemContext.vr_state.event_right_b_pressed |= secondary_button
+                    if SystemContext.control_state.command.get("estop", False):
+                        if power_off is not None:
+                            logging.warning("Estop button pressed. Shutting down power.")
+                            power_off()
 
                 except json.JSONDecodeError as e:
                     logging.warning(f"Failed to decode JSON: {e} (from {addr}) - received data: {message[:100]}")
@@ -160,9 +143,9 @@ def setup_meta_quest_udp_communication(local_ip: str, local_port: int, meta_ques
 
 
 def handle_vr_button_event(robot: Union[rby.Robot_A, rby.Robot_M], no_head: bool):
-    # right A: Initialize / Move to ready pose
-    if SystemContext.vr_state.event_right_a_pressed:
-        logging.info("Right A button pressed. Moving robot to ready pose.")
+    # ready: Initialize / Move to ready pose
+    if SystemContext.control_state.ready:
+        logging.info("Ready button pressed. Moving robot to ready pose.")
         if robot.get_control_manager_state().control_state != rby.ControlManagerState.ControlState.Idle:
             robot.cancel_control()
         if robot.wait_for_control_ready(1000):
@@ -192,22 +175,20 @@ def handle_vr_button_event(robot: Union[rby.Robot_A, rby.Robot_M], no_head: bool
                     cbc
                 )
             ).get()
-        SystemContext.vr_state.is_initialized = True
-        SystemContext.vr_state.is_stopped = False
+        SystemContext.control_state.is_initialized = True
+        SystemContext.control_state.is_stopped = False
 
-    # right B: Stop
-    elif SystemContext.vr_state.event_right_b_pressed:
-        logging.info("Right B button pressed. Stopping.")
-        SystemContext.vr_state.is_stopped = True
+    # stop: Stop
+    elif SystemContext.control_state.stop:
+        logging.info("Stop button pressed. Stopping.")
+        SystemContext.control_state.is_stopped = True
 
     else:
         return False # Stream not reset
 
     # Clear events
-    SystemContext.vr_state.event_right_a_pressed = False
-    SystemContext.vr_state.event_right_b_pressed = False
-    SystemContext.vr_state.event_left_a_pressed = False
-    SystemContext.vr_state.event_left_b_pressed = False
+    SystemContext.control_state.ready = False
+    SystemContext.control_state.stop = False
 
     return True # Stream reset
 
@@ -232,29 +213,75 @@ def average_so3_slerp(R1: np.ndarray, R2: np.ndarray) -> np.ndarray:
     return rot_avg.as_matrix()
 
 
-def publish_gv(sock: zmq.Socket):
-    while True:
-        sock.send(pickle.dumps(SystemContext.vr_state))
-        time.sleep(0.1)
+# ---------------------- 통신: 송신(상태) ----------------------
+def _mat4_to_list(T: np.ndarray):
+    return T.tolist()
+
+def _nd_to_list(x):
+    return x.tolist() if isinstance(x, np.ndarray) else x
+
+def pack_state_for_udp():
+    cs = SystemContext.control_state
+    return {
+        "joint_positions": _nd_to_list(cs.joint_positions),
+        "center_of_mass": _nd_to_list(cs.center_of_mass),
+
+        "base_pose": _mat4_to_list(cs.base_pose),
+        "torso_current_pose": _mat4_to_list(cs.torso_current_pose),
+        "right_ee_current_pose": _mat4_to_list(cs.right_ee_current_pose),
+        "left_ee_current_pose": _mat4_to_list(cs.left_ee_current_pose),
+
+        "is_initialized": cs.is_initialized,
+        "is_stopped": cs.is_stopped,
+        "is_right_following": cs.is_right_following,
+        "is_left_following": cs.is_left_following,
+        "is_torso_following": cs.is_torso_following,
+
+        "mobile_linear_velocity": _nd_to_list(cs.mobile_linear_velocity),
+        "mobile_angular_velocity": cs.mobile_angular_velocity,
+    }
+
+def publish_state_udp(control_ip: str, control_port: int, period_s: float = 0.1):
+    """로봇/컨트롤 상태를 주기적으로 컨트롤 PC에 UDP로 전송."""
+    def loop():
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as tx:
+            target = (control_ip, control_port)
+            logging.info(f"[TX] UDP state publisher -> {control_ip}:{control_port} (period={period_s}s)")
+            while True:
+                try:
+                    payload = pack_state_for_udp()
+                    blob = json.dumps(payload, ensure_ascii=False).encode('utf-8')
+                    tx.sendto(blob, target)
+                    time.sleep(period_s)
+                except Exception as e:
+                    logging.exception(f"[TX] UDP send error: {e}")
+                    time.sleep(period_s)
+    t = threading.Thread(target=loop, daemon=True)
+    t.start()
 
 
 def main(args: argparse.Namespace):
-    logging.info("=== VR Control System Starting ===")
-    logging.info(f"Server Address       : {args.server}")
-    logging.info(f"Local (UPC) IP       : {args.local_ip}:{Settings.vr_control_local_port}")
-    logging.info(f"Meta Quest IP        : {args.meta_quest_ip}:{Settings.vr_control_meta_quest_port}")
-    logging.info(f"Use Gripper          : {'No' if args.no_gripper else 'Yes'}")
-    logging.info(f"RB-Y1 gRPC Address   : {args.rby1}")
-    logging.info(f"RB-Y1 Model          : {args.rby1_model}")
-    logging.info(f"Use Head             : {'No' if args.no_head else 'Yes'}")
+    # Settings 반영
+    Settings.local_ip = args.local_ip
+    Settings.local_port = args.local_port
+    Settings.control_ip = args.control_ip
+    Settings.control_port = args.control_port
 
-    socket = open_zmq_pub_socket(args.server)
+    logging.info("=== Controller-follow (UDP) Starting ===")
+    logging.info(f"RX(bind)  : {Settings.local_ip}:{Settings.local_port}")
+    logging.info(f"TX(target): {Settings.control_ip}:{Settings.control_port}")
+    logging.info(f"RB-Y1     : {args.rby1} (model={args.rby1_model})")
+
     robot = connect_rby1(args.rby1, args.rby1_model, args.no_head)
     model = robot.model()
 
-    # Start UDP Communication with Meta Quest
-    setup_meta_quest_udp_communication(args.local_ip, Settings.vr_control_local_port, args.meta_quest_ip,
-                                       Settings.vr_control_meta_quest_port, lambda: robot.power_off(".*"))
+    # Start UDP Communication with Record
+    # 명령 수신(컨트롤러 -> 본 프로세스)
+    setup_command_udp_receiver(Settings.local_ip, Settings.local_port,
+                               power_off=lambda: robot.power_off(".*"))
+
+    # 상태 송신(본 프로세스 -> 컨트롤러)
+    publish_state_udp(Settings.control_ip, Settings.control_port, period_s=Settings.dt)
 
     gripper = None
     if not args.no_gripper:
@@ -269,9 +296,6 @@ def main(args: argparse.Namespace):
         gripper.start()
         gripper.set_normalized_target(np.array([0.0, 0.0]))
 
-    pub_thread = threading.Thread(target=publish_gv, args=(socket,), daemon=True)
-    pub_thread.start()
-
     dyn_robot = robot.get_dynamics()
     dyn_state = dyn_robot.make_state(["base", "link_torso_5", "link_right_arm_6", "link_left_arm_6"],
                                      SystemContext.robot_model.robot_joint_names)
@@ -282,27 +306,28 @@ def main(args: argparse.Namespace):
     torso_reset = False
     right_reset = False
     left_reset = False
+
     while True:
         now = time.monotonic()
         if now < next_time:
             time.sleep(next_time - now)
         next_time += Settings.dt  # 10Hz
 
-        if "hands" in SystemContext.vr_state.controller_state:
-            if "right" in SystemContext.vr_state.controller_state["hands"]:
-                right_controller = SystemContext.vr_state.controller_state["hands"]["right"]
+        if "arms" in SystemContext.control_state.command:
+            if "right" in SystemContext.control_state.command["arms"]:
+                right_controller = SystemContext.control_state.command["arms"]["right"]
                 if gripper is not None:
                     gripper_target = gripper.get_normalized_target()
-                    gripper_target[0] = right_controller["buttons"]["trigger"]
+                    gripper_target[0] = right_controller["gripper"]
                     gripper.set_normalized_target(gripper_target)
-            if "left" in SystemContext.vr_state.controller_state["hands"]:
-                left_controller = SystemContext.vr_state.controller_state["hands"]["left"]
+            if "left" in SystemContext.control_state.command["arms"]:
+                left_controller = SystemContext.control_state.command["arms"]["left"]
                 if gripper is not None:
                     gripper_target = gripper.get_normalized_target()
-                    gripper_target[1] = 1. - left_controller["buttons"]["trigger"]
+                    gripper_target[1] = 1. - left_controller["gripper"]
                     gripper.set_normalized_target(gripper_target)
 
-        if SystemContext.vr_state.joint_positions.size == 0:
+        if SystemContext.control_state.joint_positions.size == 0:
             continue
 
         # Ready / Stop button event handling -> reset stream
@@ -311,29 +336,29 @@ def main(args: argparse.Namespace):
                 stream.cancel()
                 stream = None
 
-        if not SystemContext.vr_state.is_initialized:
+        if not SystemContext.control_state.is_initialized:
             continue
 
-        if SystemContext.vr_state.is_stopped:
+        if SystemContext.control_state.is_stopped:
             if stream is not None:
                 stream.cancel()
                 stream = None
-            SystemContext.vr_state.is_initialized = False
+            SystemContext.control_state.is_initialized = False
             continue
 
-        logging.info(f"{SystemContext.vr_state.center_of_mass = }")
+        logging.info(f"{SystemContext.control_state.center_of_mass = }")
 
         # Forward kinematics
-        dyn_state.set_q(SystemContext.vr_state.joint_positions.copy()) # Current Robot Joint Positions
+        dyn_state.set_q(SystemContext.control_state.joint_positions.copy()) # Current Robot Joint Positions
         dyn_robot.compute_forward_kinematics(dyn_state)
 
         # Update current poses
-        SystemContext.vr_state.base_pose = dyn_robot.compute_transformation(dyn_state, base_link_idx, link_torso_5_idx)
-        SystemContext.vr_state.torso_current_pose = dyn_robot.compute_transformation(dyn_state, base_link_idx,
+        SystemContext.control_state.base_pose = dyn_robot.compute_transformation(dyn_state, base_link_idx, link_torso_5_idx)
+        SystemContext.control_state.torso_current_pose = dyn_robot.compute_transformation(dyn_state, base_link_idx,
                                                                                      link_torso_5_idx)
-        SystemContext.vr_state.right_ee_current_pose = dyn_robot.compute_transformation(dyn_state, base_link_idx,
+        SystemContext.control_state.right_ee_current_pose = dyn_robot.compute_transformation(dyn_state, base_link_idx,
                                                                                         link_right_arm_6_idx) @ Settings.T_hand_offset
-        SystemContext.vr_state.left_ee_current_pose = dyn_robot.compute_transformation(dyn_state, base_link_idx,
+        SystemContext.control_state.left_ee_current_pose = dyn_robot.compute_transformation(dyn_state, base_link_idx,
                                                                                        link_left_arm_6_idx) @ Settings.T_hand_offset
 
         # 12 = torso->right_ee, 13 = torso->left_ee
@@ -349,92 +374,86 @@ def main(args: argparse.Namespace):
         if stream is None:
             if robot.wait_for_control_ready(0):
                 stream = robot.create_command_stream()
-                SystemContext.vr_state.mobile_linear_velocity = np.array([0.0, 0.0])
-                SystemContext.vr_state.mobile_angular_velocity = 0.
-                SystemContext.vr_state.is_right_following = False
-                SystemContext.vr_state.is_left_following = False
-                SystemContext.vr_state.base_start_pose = SystemContext.vr_state.base_pose
-                SystemContext.vr_state.torso_locked_pose = SystemContext.vr_state.torso_current_pose
-                SystemContext.vr_state.right_hand_locked_pose = SystemContext.vr_state.right_ee_current_pose
-                SystemContext.vr_state.left_hand_locked_pose = SystemContext.vr_state.left_ee_current_pose
+                SystemContext.control_state.mobile_linear_velocity = np.array([0.0, 0.0])
+                SystemContext.control_state.mobile_angular_velocity = 0.
+                SystemContext.control_state.is_right_following = False
+                SystemContext.control_state.is_left_following = False
+                SystemContext.control_state.base_start_pose = SystemContext.control_state.base_pose
+                SystemContext.control_state.torso_locked_pose = SystemContext.control_state.torso_current_pose
+                SystemContext.control_state.right_arm_locked_pose = SystemContext.control_state.right_ee_current_pose
+                SystemContext.control_state.left_arm_locked_pose = SystemContext.control_state.left_ee_current_pose
 
-        if "hands" in SystemContext.vr_state.controller_state:
-            if "right" in SystemContext.vr_state.controller_state["hands"]:
-                right_controller = SystemContext.vr_state.controller_state["hands"]["right"]
-                thumbstick_axis = right_controller["buttons"]["thumbstickAxis"]
-                acc = np.array([thumbstick_axis[1], thumbstick_axis[0]])
-                SystemContext.vr_state.mobile_linear_velocity += Settings.mobile_linear_acceleration_gain * acc
+        if "arms" in SystemContext.control_state.command:
+            if "right" in SystemContext.control_state.command["arms"]:
+                right_controller = SystemContext.control_state.command["arms"]["right"]
 
                 # Update current pose
-                SystemContext.vr_state.right_controller_current_pose = T_conv.T @ pose_to_se3(
+                SystemContext.control_state.right_command_current_pose = T_conv.T @ pose_to_se3(
                     right_controller["position"],
                     right_controller["rotation"]) @ T_conv
 
-                trigger_pressed = right_controller["buttons"]["grip"] > 0.8
-                # If already following and trigger released -> stop following
-                if SystemContext.vr_state.is_right_following and not trigger_pressed:
-                    SystemContext.vr_state.is_right_following = False
-                # If not following and trigger pressed -> start following
-                if not SystemContext.vr_state.is_right_following and trigger_pressed:
+                move = SystemContext.control_state.move
+                # If already following and move released -> stop following
+                if SystemContext.control_state.is_right_following and not move:
+                    SystemContext.control_state.is_right_following = False
+                # If not following and move pressed -> start following
+                if not SystemContext.control_state.is_right_following and move:
                     # Save current poses
-                    SystemContext.vr_state.right_controller_start_pose = SystemContext.vr_state.right_controller_current_pose
-                    SystemContext.vr_state.right_ee_start_pose = SystemContext.vr_state.right_ee_current_pose
-                    SystemContext.vr_state.is_right_following = True
+                    SystemContext.control_state.right_command_start_pose = SystemContext.control_state.right_command_current_pose
+                    SystemContext.control_state.right_ee_start_pose = SystemContext.control_state.right_ee_current_pose
+                    SystemContext.control_state.is_right_following = True
                     right_reset = True
             # If no right controller data, stop following
             else:
-                SystemContext.vr_state.is_right_following = False
+                SystemContext.control_state.is_right_following = False
 
             # Same for left controller
-            if "left" in SystemContext.vr_state.controller_state["hands"]:
-                left_controller = SystemContext.vr_state.controller_state["hands"]["left"]
-                thumbstick_axis = left_controller["buttons"]["thumbstickAxis"]
-                SystemContext.vr_state.mobile_angular_velocity += Settings.mobile_angular_acceleration_gain * \
-                                                                  thumbstick_axis[0]
-                
-                SystemContext.vr_state.left_controller_current_pose = T_conv.T @ pose_to_se3(
+            if "left" in SystemContext.control_state.command["arms"]:
+                left_controller = SystemContext.control_state.command["arms"]["left"]
+
+                SystemContext.control_state.left_command_current_pose = T_conv.T @ pose_to_se3(
                     left_controller["position"],
                     left_controller["rotation"]) @ T_conv
 
-                trigger_pressed = left_controller["buttons"]["grip"] > 0.8
-                if SystemContext.vr_state.is_left_following and not trigger_pressed:
-                    SystemContext.vr_state.is_left_following = False
-                if not SystemContext.vr_state.is_left_following and trigger_pressed:
-                    SystemContext.vr_state.left_controller_start_pose = SystemContext.vr_state.left_controller_current_pose
-                    SystemContext.vr_state.left_ee_start_pose = SystemContext.vr_state.left_ee_current_pose
-                    SystemContext.vr_state.is_left_following = True
+                move = SystemContext.control_state.move
+                if SystemContext.control_state.is_left_following and not move:
+                    SystemContext.control_state.is_left_following = False
+                if not SystemContext.control_state.is_left_following and move:
+                    SystemContext.control_state.left_command_start_pose = SystemContext.control_state.left_command_current_pose
+                    SystemContext.control_state.left_ee_start_pose = SystemContext.control_state.left_ee_current_pose
+                    SystemContext.control_state.is_left_following = True
                     left_reset = True
             else:
-                SystemContext.vr_state.is_left_following = False
+                SystemContext.control_state.is_left_following = False
 
-            if "head" in SystemContext.vr_state.controller_state:
-                head_controller = SystemContext.vr_state.controller_state["head"]
-                SystemContext.vr_state.head_controller_current_pose = T_conv.T @ pose_to_se3(
+            if "head" in SystemContext.control_state.command:
+                head_controller = SystemContext.control_state.command["head"]
+                SystemContext.control_state.head_command_current_pose = T_conv.T @ pose_to_se3(
                     head_controller["position"],
                     head_controller["rotation"]) @ T_conv
 
                 # If both hands are following, start tracking head
-                following = SystemContext.vr_state.is_right_following and SystemContext.vr_state.is_left_following
-                if SystemContext.vr_state.is_torso_following and not following:
-                    SystemContext.vr_state.is_torso_following = False
-                if not SystemContext.vr_state.is_torso_following and following:
-                    SystemContext.vr_state.head_controller_start_pose = SystemContext.vr_state.head_controller_current_pose
-                    SystemContext.vr_state.torso_start_pose = SystemContext.vr_state.torso_current_pose
-                    SystemContext.vr_state.is_torso_following = True
+                following = SystemContext.control_state.is_right_following and SystemContext.control_state.is_left_following
+                if SystemContext.control_state.is_torso_following and not following:
+                    SystemContext.control_state.is_torso_following = False
+                if not SystemContext.control_state.is_torso_following and following:
+                    SystemContext.control_state.head_command_start_pose = SystemContext.control_state.head_command_current_pose
+                    SystemContext.control_state.torso_start_pose = SystemContext.control_state.torso_current_pose
+                    SystemContext.control_state.is_torso_following = True
                     torso_reset = True
             else:
-                SystemContext.vr_state.is_torso_following = False
+                SystemContext.control_state.is_torso_following = False
 
-        SystemContext.vr_state.mobile_linear_velocity -= Settings.mobile_linear_damping_gain * SystemContext.vr_state.mobile_linear_velocity
-        SystemContext.vr_state.mobile_angular_velocity -= Settings.mobile_angular_damping_gain * SystemContext.vr_state.mobile_angular_velocity
+        SystemContext.control_state.mobile_linear_velocity -= Settings.mobile_linear_damping_gain * SystemContext.control_state.mobile_linear_velocity
+        SystemContext.control_state.mobile_angular_velocity -= Settings.mobile_angular_damping_gain * SystemContext.control_state.mobile_angular_velocity
 
         if stream:
             try:
-                if SystemContext.vr_state.is_right_following:
+                if SystemContext.control_state.is_right_following:
                     # Compute the difference between the current and starting controller poses
                     # current = diff @ start -> diff = inv(start) @ current
                     diff = np.linalg.inv(
-                        SystemContext.vr_state.right_controller_start_pose) @ SystemContext.vr_state.right_controller_current_pose
+                        SystemContext.control_state.right_command_start_pose) @ SystemContext.control_state.right_command_current_pose
 
                     # Convert the difference to the global frame
                     T_global2start = np.identity(4)
@@ -442,39 +461,39 @@ def main(args: argparse.Namespace):
                     diff_global = T_global2start @ diff @ T_global2start.T
 
                     T = np.identity(4)
-                    T[:3, :3] = SystemContext.vr_state.right_ee_start_pose[:3, :3]
-                    right_T = SystemContext.vr_state.right_ee_start_pose @ diff_global
-                    SystemContext.vr_state.right_hand_locked_pose = right_T
+                    T[:3, :3] = SystemContext.control_state.right_ee_start_pose[:3, :3]
+                    right_T = SystemContext.control_state.right_ee_start_pose @ diff_global
+                    SystemContext.control_state.right_arm_locked_pose = right_T
                 else:
-                    right_T = SystemContext.vr_state.right_hand_locked_pose
+                    right_T = SystemContext.control_state.right_arm_locked_pose
 
-                if SystemContext.vr_state.is_left_following:
+                if SystemContext.control_state.is_left_following:
                     diff = np.linalg.inv(
-                        SystemContext.vr_state.left_controller_start_pose) @ SystemContext.vr_state.left_controller_current_pose
+                        SystemContext.control_state.left_command_start_pose) @ SystemContext.control_state.left_command_current_pose
 
                     T_global2start = np.identity(4)
                     T_global2start[:3, :3] = R.from_euler('y', 90, degrees=True).as_matrix()
                     diff_global = T_global2start @ diff @ T_global2start.T
 
                     T = np.identity(4)
-                    T[:3, :3] = SystemContext.vr_state.left_ee_start_pose[:3, :3]
-                    left_T = SystemContext.vr_state.left_ee_start_pose @ diff_global
-                    SystemContext.vr_state.left_hand_locked_pose = left_T
+                    T[:3, :3] = SystemContext.control_state.left_ee_start_pose[:3, :3]
+                    left_T = SystemContext.control_state.left_ee_start_pose @ diff_global
+                    SystemContext.control_state.left_arm_locked_pose = left_T
                 else:
-                    left_T = SystemContext.vr_state.left_hand_locked_pose
+                    left_T = SystemContext.control_state.left_arm_locked_pose
 
-                if SystemContext.vr_state.is_torso_following:
+                if SystemContext.control_state.is_torso_following:
                     print('a')
                     diff = np.linalg.inv(
-                        SystemContext.vr_state.head_controller_start_pose) @ SystemContext.vr_state.head_controller_current_pose
-                    print(SystemContext.vr_state.head_controller_start_pose)
+                        SystemContext.control_state.head_command_start_pose) @ SystemContext.control_state.head_command_current_pose
+                    print(SystemContext.control_state.head_command_start_pose)
 
                     T = np.identity(4)
-                    T[:3, :3] = SystemContext.vr_state.torso_start_pose[:3, :3]
-                    torso_T = SystemContext.vr_state.torso_start_pose @ diff
-                    SystemContext.vr_state.torso_locked_pose = torso_T
+                    T[:3, :3] = SystemContext.control_state.torso_start_pose[:3, :3]
+                    torso_T = SystemContext.control_state.torso_start_pose @ diff
+                    SystemContext.control_state.torso_locked_pose = torso_T
                 else:
-                    torso_T = SystemContext.vr_state.torso_locked_pose
+                    torso_T = SystemContext.control_state.torso_locked_pose
 
                 if args.whole_body:
                     ctrl_builder = (
@@ -570,8 +589,8 @@ def main(args: argparse.Namespace):
                         .set_mobility_command(
                             rby.SE2VelocityCommandBuilder()
                             .set_command_header(rby.CommandHeaderBuilder().set_control_hold_time(Settings.dt * 10))
-                            .set_velocity(-SystemContext.vr_state.mobile_linear_velocity,
-                                          -SystemContext.vr_state.mobile_angular_velocity)
+                            .set_velocity(-SystemContext.control_state.mobile_linear_velocity,
+                                          -SystemContext.control_state.mobile_angular_velocity)
                             .set_minimum_time(Settings.dt * 1.01)
                         )
                         .set_body_command(
@@ -584,44 +603,18 @@ def main(args: argparse.Namespace):
                 stream = None
                 exit(1)
 
-        # ...
-
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="RB-Y1 VR Control Launcher")
+    parser = argparse.ArgumentParser(description="RB-Y1 Controller-Follow (UDP I/O)")
+    parser.add_argument("--local_ip",   required=True, type=str, help="This PC bind IP for receiving controller commands")
+    parser.add_argument("--local_port", required=True, type=int, help="UDP port to bind for controller commands")
+    parser.add_argument("--control_ip", required=True, type=str, help="Controller PC IP to send robot/state")
+    parser.add_argument("--control_port", required=True, type=int, help="Controller PC port to send robot/state")
 
-    parser.add_argument(
-        "-s", "--server", type=str, default="tcp://*:5555",
-        help="ZMQ server address for the UPC (default: tcp://*:5555)"
-    )
-    parser.add_argument(
-        "--local_ip", required=True, type=str,
-        help="Local Wi-Fi (or LAN) IP address of the UPC"
-    )
-    parser.add_argument(
-        "--meta_quest_ip", required=True, type=str,
-        help="Wi-Fi (or LAN) IP address of the Meta Quest"
-    )
-    parser.add_argument(
-        "--no_gripper", action="store_true",
-        help="Run without gripper support"
-    )
-    parser.add_argument(
-        "--rby1", default="192.168.30.1:50051", type=str,
-        help="gRPC address of the RB-Y1 robot (default: 192.168.30.1:50051)"
-    )
-    parser.add_argument(
-        "--rby1_model", default="a", type=str,
-        help="Model type of the RB-Y1 robot (default: a)"
-    )
-    parser.add_argument(
-        "--no_head", action="store_true", 
-        help="Run without controlling the head"
-    )
-    parser.add_argument(
-        "--whole_body", action="store_true",
-        help="Use a whole-body optimization formulation (single control for all joints)"
-    )
+    parser.add_argument("--no_gripper", action="store_true")
+    parser.add_argument("--rby1", default="192.168.30.1:50051", type=str)
+    parser.add_argument("--rby1_model", default="a", type=str)
+    parser.add_argument("--no_head", action="store_true")
 
     args = parser.parse_args()
     main(args)

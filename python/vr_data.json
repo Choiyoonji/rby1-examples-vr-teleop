@@ -1,0 +1,4820 @@
+[
+    {
+        "timestamp": 978.8261,
+        "head": {
+            "position": [
+                0.033572,
+                1.013359,
+                -0.078294605
+            ],
+            "rotation": [
+                -0.0108464872,
+                0.004023522,
+                -0.0280551519,
+                0.999539435
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.2645563,
+                    0.9221637,
+                    0.0600441322
+                ],
+                "rotation": [
+                    0.00487053627,
+                    0.172536954,
+                    -0.010164842,
+                    0.9849386
+                ],
+                "buttons": {
+                    "primaryButton": true,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1491608,
+                    0.9157428,
+                    0.07787527
+                ],
+                "rotation": [
+                    -0.04541965,
+                    -0.0851059556,
+                    0.0218983553,
+                    0.995095253
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 978.881653,
+        "head": {
+            "position": [
+                0.0328964442,
+                1.01362622,
+                -0.07803749
+            ],
+            "rotation": [
+                -0.01154601,
+                0.00253425539,
+                -0.02602133,
+                0.9995915
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.2620143,
+                    0.917949557,
+                    0.06130903
+                ],
+                "rotation": [
+                    0.0111942571,
+                    0.176618367,
+                    0.00163439615,
+                    0.9842144
+                ],
+                "buttons": {
+                    "primaryButton": true,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.150617272,
+                    0.9156966,
+                    0.0782358944
+                ],
+                "rotation": [
+                    -0.04266167,
+                    -0.08706102,
+                    0.0242815837,
+                    0.994992852
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 978.9371,
+        "head": {
+            "position": [
+                0.0331625566,
+                1.01347113,
+                -0.07723293
+            ],
+            "rotation": [
+                -0.0114491032,
+                0.00349721336,
+                -0.0268668849,
+                0.9995674
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.2599871,
+                    0.916297555,
+                    0.06182246
+                ],
+                "rotation": [
+                    0.008935814,
+                    0.167721242,
+                    -0.0017976251,
+                    0.985792339
+                ],
+                "buttons": {
+                    "primaryButton": true,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.152828574,
+                    0.915561736,
+                    0.07978438
+                ],
+                "rotation": [
+                    -0.04005775,
+                    -0.0915271938,
+                    0.02819697,
+                    0.994596958
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 978.9926,
+        "head": {
+            "position": [
+                0.0332124159,
+                1.01375818,
+                -0.07603404
+            ],
+            "rotation": [
+                -0.011791857,
+                0.00479547726,
+                -0.0282639638,
+                0.999519467
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.259376258,
+                    0.917077839,
+                    0.0624311864
+                ],
+                "rotation": [
+                    0.00689071463,
+                    0.164579,
+                    -0.00538668642,
+                    0.986325145
+                ],
+                "buttons": {
+                    "primaryButton": true,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1543557,
+                    0.9155775,
+                    0.08126168
+                ],
+                "rotation": [
+                    -0.0435883328,
+                    -0.1000987,
+                    0.0279371142,
+                    0.993629634
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.048462,
+        "head": {
+            "position": [
+                0.032823775,
+                1.01395559,
+                -0.07493703
+            ],
+            "rotation": [
+                -0.0118461261,
+                0.00466507673,
+                -0.02832758,
+                0.9995177
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.2593121,
+                    0.918210268,
+                    0.0634454
+                ],
+                "rotation": [
+                    0.002655993,
+                    0.160736308,
+                    -0.00509618968,
+                    0.9869806
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1551302,
+                    0.9148808,
+                    0.08327973
+                ],
+                "rotation": [
+                    -0.0410309434,
+                    -0.102610409,
+                    0.0331845954,
+                    0.9933209
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.1037,
+        "head": {
+            "position": [
+                0.0325933769,
+                1.01395559,
+                -0.07377232
+            ],
+            "rotation": [
+                -0.0106973834,
+                0.0043734163,
+                -0.0279999785,
+                0.9995411
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.260110229,
+                    0.918544352,
+                    0.0646296
+                ],
+                "rotation": [
+                    -0.000484282384,
+                    0.159727678,
+                    -0.0103964424,
+                    0.9871063
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.155435681,
+                    0.9132115,
+                    0.0850787759
+                ],
+                "rotation": [
+                    -0.0336892754,
+                    -0.10061945,
+                    0.0425158441,
+                    0.993445158
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.159546,
+        "head": {
+            "position": [
+                0.0325664952,
+                1.01360381,
+                -0.0730813
+            ],
+            "rotation": [
+                -0.009212366,
+                0.00450839149,
+                -0.0280799326,
+                0.999553144
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.259669244,
+                    0.91752243,
+                    0.06579785
+                ],
+                "rotation": [
+                    0.003862896,
+                    0.156926274,
+                    -0.0191621035,
+                    0.9874169
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.155996054,
+                    0.9100668,
+                    0.08700268
+                ],
+                "rotation": [
+                    -0.02404272,
+                    -0.102324411,
+                    0.04783996,
+                    0.99330914
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.215,
+        "head": {
+            "position": [
+                0.032714732,
+                1.01338482,
+                -0.0726148
+            ],
+            "rotation": [
+                -0.008445328,
+                0.0047211796,
+                -0.0280028284,
+                0.9995611
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.258155346,
+                    0.9137718,
+                    0.06763892
+                ],
+                "rotation": [
+                    0.01623397,
+                    0.1538803,
+                    -0.0211883616,
+                    0.9877289
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.157668248,
+                    0.9043926,
+                    0.0896875262
+                ],
+                "rotation": [
+                    -0.002531004,
+                    -0.1011138,
+                    0.07148787,
+                    0.9922999
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.2706,
+        "head": {
+            "position": [
+                0.03272781,
+                1.01331174,
+                -0.072356835
+            ],
+            "rotation": [
+                -0.007479075,
+                0.004681766,
+                -0.0277991146,
+                0.999574661
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.2565475,
+                    0.909460843,
+                    0.0700177252
+                ],
+                "rotation": [
+                    0.03446973,
+                    0.153288439,
+                    -0.0203674734,
+                    0.9873701
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.160366967,
+                    0.8999257,
+                    0.0923365653
+                ],
+                "rotation": [
+                    0.0161105655,
+                    -0.109002627,
+                    0.087860465,
+                    0.9900199
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.3262,
+        "head": {
+            "position": [
+                0.0327356458,
+                1.0130055,
+                -0.07235594
+            ],
+            "rotation": [
+                -0.006637632,
+                0.005108818,
+                -0.02800346,
+                0.9995727
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.2554323,
+                    0.910924852,
+                    0.07197462
+                ],
+                "rotation": [
+                    0.0517087132,
+                    0.153262675,
+                    -0.0294193625,
+                    0.986393034
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.164212659,
+                    0.9013257,
+                    0.09430713
+                ],
+                "rotation": [
+                    0.0315687172,
+                    -0.110262871,
+                    0.104983158,
+                    0.987838149
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.3817,
+        "head": {
+            "position": [
+                0.0325550437,
+                1.01265526,
+                -0.07256785
+            ],
+            "rotation": [
+                -0.00606608251,
+                0.005480662,
+                -0.0281006712,
+                0.9995717
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.253835082,
+                    0.926134348,
+                    0.07182885
+                ],
+                "rotation": [
+                    0.02987015,
+                    0.138902619,
+                    -0.0497903973,
+                    0.988602459
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.16666463,
+                    0.912741959,
+                    0.0940960646
+                ],
+                "rotation": [
+                    0.003834203,
+                    -0.119390324,
+                    0.09742765,
+                    0.9880482
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.437256,
+        "head": {
+            "position": [
+                0.032314904,
+                1.01311052,
+                -0.07279277
+            ],
+            "rotation": [
+                -0.008449355,
+                0.00549414754,
+                -0.0278142523,
+                0.9995623
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.252576739,
+                    0.9510941,
+                    0.06951836
+                ],
+                "rotation": [
+                    -0.0115346294,
+                    0.132720515,
+                    -0.05494011,
+                    0.989562452
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1689659,
+                    0.931276441,
+                    0.09261719
+                ],
+                "rotation": [
+                    -0.03879431,
+                    -0.123001829,
+                    0.09160099,
+                    0.987408161
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.4926,
+        "head": {
+            "position": [
+                0.0319069177,
+                1.01405716,
+                -0.07280472
+            ],
+            "rotation": [
+                -0.0125405462,
+                0.005346954,
+                -0.0273413844,
+                0.999533236
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.252393782,
+                    0.98088026,
+                    0.06542233
+                ],
+                "rotation": [
+                    -0.0622605756,
+                    0.1305286,
+                    -0.0640308037,
+                    0.987413764
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.169355974,
+                    0.9516675,
+                    0.0914362445
+                ],
+                "rotation": [
+                    -0.07253409,
+                    -0.122238919,
+                    0.08488925,
+                    0.9861999
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.5482,
+        "head": {
+            "position": [
+                0.0315128937,
+                1.01469862,
+                -0.0729434639
+            ],
+            "rotation": [
+                -0.0161737371,
+                0.00456473231,
+                -0.0262331776,
+                0.999514639
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.25173226,
+                    1.01076162,
+                    0.0588734634
+                ],
+                "rotation": [
+                    -0.110989012,
+                    0.132551953,
+                    -0.0716745257,
+                    0.982331038
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1686144,
+                    0.9736527,
+                    0.0883532763
+                ],
+                "rotation": [
+                    -0.106893331,
+                    -0.12216609,
+                    0.07665558,
+                    0.9837547
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.6038,
+        "head": {
+            "position": [
+                0.0307468046,
+                1.01536226,
+                -0.0726574957
+            ],
+            "rotation": [
+                -0.0192883685,
+                0.00396093726,
+                -0.025057558,
+                0.999492049
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.249261692,
+                    1.03717268,
+                    0.0505788438
+                ],
+                "rotation": [
+                    -0.1637872,
+                    0.141215712,
+                    -0.0623280481,
+                    0.9743445
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.166416049,
+                    0.9957555,
+                    0.0818578452
+                ],
+                "rotation": [
+                    -0.154003128,
+                    -0.127262369,
+                    0.06028129,
+                    0.9779844
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.659363,
+        "head": {
+            "position": [
+                0.0302123912,
+                1.01582456,
+                -0.07232348
+            ],
+            "rotation": [
+                -0.0212702751,
+                0.00334557914,
+                -0.0236468315,
+                0.999488533
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.245782778,
+                    1.055413,
+                    0.04373492
+                ],
+                "rotation": [
+                    -0.204956219,
+                    0.147302017,
+                    -0.04819818,
+                    0.96642226
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.162912548,
+                    1.01290441,
+                    0.0757238
+                ],
+                "rotation": [
+                    -0.191801533,
+                    -0.138443708,
+                    0.0377778821,
+                    0.9708854
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.714966,
+        "head": {
+            "position": [
+                0.02931765,
+                1.01622415,
+                -0.0718057752
+            ],
+            "rotation": [
+                -0.0224266984,
+                0.00286798179,
+                -0.0219710413,
+                0.9995029
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.24291274,
+                    1.06338251,
+                    0.04113353
+                ],
+                "rotation": [
+                    -0.22233662,
+                    0.146781147,
+                    -0.0430724546,
+                    0.962894857
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.159645826,
+                    1.02255738,
+                    0.07132411
+                ],
+                "rotation": [
+                    -0.218662784,
+                    -0.141463816,
+                    0.0194832236,
+                    0.965295255
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.770569,
+        "head": {
+            "position": [
+                0.0289352145,
+                1.01627135,
+                -0.0711626858
+            ],
+            "rotation": [
+                -0.0222932622,
+                0.00276395679,
+                -0.0212162286,
+                0.9995225
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.240511656,
+                    1.05910647,
+                    0.04451462
+                ],
+                "rotation": [
+                    -0.2232474,
+                    0.146286651,
+                    -0.03407416,
+                    0.963119864
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.158118337,
+                    1.02308881,
+                    0.07078342
+                ],
+                "rotation": [
+                    -0.217767626,
+                    -0.141371936,
+                    0.0209994391,
+                    0.9654794
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.8261,
+        "head": {
+            "position": [
+                0.02849058,
+                1.0160737,
+                -0.0707588643
+            ],
+            "rotation": [
+                -0.0213161446,
+                0.00160528719,
+                -0.0202199388,
+                0.999567032
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.2409869,
+                    1.04231167,
+                    0.05359664
+                ],
+                "rotation": [
+                    -0.187342852,
+                    0.151022375,
+                    -0.035857074,
+                    0.9699532
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.155212671,
+                    1.01159918,
+                    0.0770303
+                ],
+                "rotation": [
+                    -0.201412737,
+                    -0.136702016,
+                    0.00690449076,
+                    0.9698958
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.8817,
+        "head": {
+            "position": [
+                0.0280735679,
+                1.015805,
+                -0.07036544
+            ],
+            "rotation": [
+                -0.0198511835,
+                0.000384107232,
+                -0.0198968872,
+                0.9996049
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.241980314,
+                    1.017062,
+                    0.06403752
+                ],
+                "rotation": [
+                    -0.1412736,
+                    0.161576077,
+                    -0.03730373,
+                    0.9759833
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.154579908,
+                    0.9902929,
+                    0.08730613
+                ],
+                "rotation": [
+                    -0.146507382,
+                    -0.13297087,
+                    0.0142766312,
+                    0.9801278
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.937256,
+        "head": {
+            "position": [
+                0.0278851818,
+                1.01554489,
+                -0.07014975
+            ],
+            "rotation": [
+                -0.0187433269,
+                2.43186951e-05,
+                -0.0208005663,
+                0.9996079
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.242143467,
+                    0.9853902,
+                    0.07290082
+                ],
+                "rotation": [
+                    -0.08793742,
+                    0.1680565,
+                    -0.0376031958,
+                    0.981126964
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.15197593,
+                    0.959962964,
+                    0.09771787
+                ],
+                "rotation": [
+                    -0.07455821,
+                    -0.1150043,
+                    0.0300586782,
+                    0.9901068
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 979.9928,
+        "head": {
+            "position": [
+                0.0278520286,
+                1.01569867,
+                -0.06982696
+            ],
+            "rotation": [
+                -0.018609887,
+                0.0009457916,
+                -0.0225431044,
+                0.9995722
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.243684173,
+                    0.952751935,
+                    0.079826504
+                ],
+                "rotation": [
+                    -0.02647684,
+                    0.171938911,
+                    -0.0548534468,
+                    0.9832229
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.147231549,
+                    0.9268529,
+                    0.102723107
+                ],
+                "rotation": [
+                    0.0109122852,
+                    -0.127800837,
+                    0.03133666,
+                    0.9912446
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.0623,
+        "head": {
+            "position": [
+                0.0284050833,
+                1.01533008,
+                -0.0698775649
+            ],
+            "rotation": [
+                -0.0180356577,
+                0.00255168974,
+                -0.024917569,
+                0.9995235
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.24260059,
+                    0.9186273,
+                    0.08358024
+                ],
+                "rotation": [
+                    0.03050853,
+                    0.155669436,
+                    -0.0670439154,
+                    0.985059142
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.14349708,
+                    0.899089456,
+                    0.104882
+                ],
+                "rotation": [
+                    0.0512285531,
+                    -0.120247371,
+                    0.0431497879,
+                    0.990481853
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.117859,
+        "head": {
+            "position": [
+                0.0287724417,
+                1.01502371,
+                -0.07038834
+            ],
+            "rotation": [
+                -0.0171839762,
+                0.00165803742,
+                -0.02477566,
+                0.999544
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.2496197,
+                    0.900548,
+                    0.08372229
+                ],
+                "rotation": [
+                    0.0583242662,
+                    0.1762575,
+                    -0.08898558,
+                    0.978577137
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.144418,
+                    0.8887491,
+                    0.106294006
+                ],
+                "rotation": [
+                    0.07599279,
+                    -0.11384923,
+                    0.05272743,
+                    0.9891832
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.1732,
+        "head": {
+            "position": [
+                0.0293900371,
+                1.01510549,
+                -0.07103189
+            ],
+            "rotation": [
+                -0.0168073662,
+                8.074939e-05,
+                -0.0246016271,
+                0.999556065
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.2658217,
+                    0.895281434,
+                    0.08234773
+                ],
+                "rotation": [
+                    0.0705728158,
+                    0.1778342,
+                    -0.120430365,
+                    0.9741104
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1529239,
+                    0.8896448,
+                    0.10822764
+                ],
+                "rotation": [
+                    0.0693027,
+                    -0.113799565,
+                    0.06856684,
+                    0.988709
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.2288,
+        "head": {
+            "position": [
+                0.0302384552,
+                1.01529562,
+                -0.0714506954
+            ],
+            "rotation": [
+                -0.0164158326,
+                -0.000400751829,
+                -0.0251015276,
+                0.999550045
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.292296,
+                    0.9013234,
+                    0.0781244338
+                ],
+                "rotation": [
+                    0.0392057374,
+                    0.200895816,
+                    -0.09758971,
+                    0.973950744
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1695601,
+                    0.896994054,
+                    0.109901816
+                ],
+                "rotation": [
+                    0.0472123474,
+                    -0.114545807,
+                    0.0628765151,
+                    0.99030143
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.284546,
+        "head": {
+            "position": [
+                0.0312622152,
+                1.01530409,
+                -0.07142837
+            ],
+            "rotation": [
+                -0.0160829276,
+                0.000323146582,
+                -0.0267736353,
+                0.999512136
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.325667262,
+                    0.913123667,
+                    0.07017596
+                ],
+                "rotation": [
+                    0.00183818024,
+                    0.218416944,
+                    -0.06735558,
+                    0.973526537
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.194912031,
+                    0.9059407,
+                    0.111214682
+                ],
+                "rotation": [
+                    0.0144112986,
+                    -0.136308,
+                    0.044841785,
+                    0.989546239
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.3401,
+        "head": {
+            "position": [
+                0.03236691,
+                1.01511478,
+                -0.07140058
+            ],
+            "rotation": [
+                -0.01520396,
+                0.0009070933,
+                -0.0283345152,
+                0.999482453
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.3619438,
+                    0.9264161,
+                    0.0587475337
+                ],
+                "rotation": [
+                    -0.02698838,
+                    0.230662718,
+                    -0.0390455276,
+                    0.9718754
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.225458324,
+                    0.915130556,
+                    0.11014723
+                ],
+                "rotation": [
+                    -0.000100469217,
+                    -0.152462676,
+                    0.0409134738,
+                    0.987462044
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.395569,
+        "head": {
+            "position": [
+                0.0331440046,
+                1.01503384,
+                -0.07105172
+            ],
+            "rotation": [
+                -0.0140059069,
+                0.00131656229,
+                -0.028650146,
+                0.9994905
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.3984827,
+                    0.9353876,
+                    0.0437054932
+                ],
+                "rotation": [
+                    -0.0438164473,
+                    0.25853163,
+                    -0.0249692071,
+                    0.9646855
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.256396741,
+                    0.923557639,
+                    0.104772948
+                ],
+                "rotation": [
+                    -0.02326179,
+                    -0.1678208,
+                    0.0486009866,
+                    0.984344
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.4514,
+        "head": {
+            "position": [
+                0.0340640247,
+                1.01482511,
+                -0.07073815
+            ],
+            "rotation": [
+                -0.0126035474,
+                0.00215783715,
+                -0.0291952547,
+                0.999492
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.432955563,
+                    0.9391729,
+                    0.0294749476
+                ],
+                "rotation": [
+                    -0.04832023,
+                    0.322673529,
+                    -0.00341724441,
+                    0.945269942
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.282206059,
+                    0.9285657,
+                    0.09886699
+                ],
+                "rotation": [
+                    -0.027313,
+                    -0.183342054,
+                    0.04818194,
+                    0.981487751
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.506531,
+        "head": {
+            "position": [
+                0.03490058,
+                1.01407814,
+                -0.07085162
+            ],
+            "rotation": [
+                -0.0106675224,
+                0.00342123257,
+                -0.02984829,
+                0.9994917
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.455849,
+                    0.9395123,
+                    0.01798452
+                ],
+                "rotation": [
+                    -0.0457418859,
+                    0.365013927,
+                    -0.0008369833,
+                    0.929877341
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.301310033,
+                    0.931905031,
+                    0.09259961
+                ],
+                "rotation": [
+                    -0.0343541354,
+                    -0.220989823,
+                    0.05002691,
+                    0.973386168
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.562134,
+        "head": {
+            "position": [
+                0.03542886,
+                1.01364541,
+                -0.07132152
+            ],
+            "rotation": [
+                -0.009473858,
+                0.004166171,
+                -0.0308301169,
+                0.999471068
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.4660014,
+                    0.9367571,
+                    0.014198415
+                ],
+                "rotation": [
+                    -0.0374296755,
+                    0.394487739,
+                    -0.005075404,
+                    0.918124557
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.308416128,
+                    0.9329236,
+                    0.0882577151
+                ],
+                "rotation": [
+                    -0.0401176326,
+                    -0.231309444,
+                    0.0607265234,
+                    0.970154
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.617737,
+        "head": {
+            "position": [
+                0.0353338867,
+                1.013531,
+                -0.07211114
+            ],
+            "rotation": [
+                -0.009918332,
+                0.00414314866,
+                -0.0316707641,
+                0.9994406
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.460165828,
+                    0.933210969,
+                    0.0189373717
+                ],
+                "rotation": [
+                    -0.0327069238,
+                    0.3914762,
+                    -0.008312559,
+                    0.919569254
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.30466,
+                    0.9316768,
+                    0.08783832
+                ],
+                "rotation": [
+                    -0.04609264,
+                    -0.231817916,
+                    0.0631853938,
+                    0.969610035
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.6732,
+        "head": {
+            "position": [
+                0.0349177644,
+                1.01360369,
+                -0.07286193
+            ],
+            "rotation": [
+                -0.01100631,
+                0.003324762,
+                -0.03210732,
+                0.9994183
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.441024452,
+                    0.9284209,
+                    0.030510962
+                ],
+                "rotation": [
+                    -0.0245562177,
+                    0.358654171,
+                    -0.0154471472,
+                    0.933019638
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.2893569,
+                    0.92556113,
+                    0.09270197
+                ],
+                "rotation": [
+                    -0.0359529555,
+                    -0.22416313,
+                    0.07079533,
+                    0.9713117
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.728943,
+        "head": {
+            "position": [
+                0.0345399,
+                1.01357341,
+                -0.0734712
+            ],
+            "rotation": [
+                -0.0121576488,
+                0.00329297828,
+                -0.0327376053,
+                0.9993847
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.413832456,
+                    0.9216054,
+                    0.04445471
+                ],
+                "rotation": [
+                    -0.00494183134,
+                    0.321639419,
+                    -0.0274526775,
+                    0.9464513
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.2615401,
+                    0.9173649,
+                    0.09871501
+                ],
+                "rotation": [
+                    -0.0305780564,
+                    -0.197578192,
+                    0.0531643443,
+                    0.9783667
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.7845,
+        "head": {
+            "position": [
+                0.03443809,
+                1.01388812,
+                -0.07332489
+            ],
+            "rotation": [
+                -0.0138554629,
+                0.00347006321,
+                -0.0339002162,
+                0.9993232
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.381776035,
+                    0.915414631,
+                    0.0567709766
+                ],
+                "rotation": [
+                    0.006161459,
+                    0.271746635,
+                    -0.0264994781,
+                    0.9619842
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.222393915,
+                    0.9079781,
+                    0.102042809
+                ],
+                "rotation": [
+                    -0.008001227,
+                    -0.128504649,
+                    0.0237374883,
+                    0.991392553
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.8401,
+        "head": {
+            "position": [
+                0.03405375,
+                1.01405025,
+                -0.0729543343
+            ],
+            "rotation": [
+                -0.0158810169,
+                0.0040409565,
+                -0.0348049775,
+                0.99925977
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.3465524,
+                    0.904797435,
+                    0.06752314
+                ],
+                "rotation": [
+                    0.0346177928,
+                    0.235893726,
+                    -0.042493403,
+                    0.970232
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.186467469,
+                    0.8977861,
+                    0.101619005
+                ],
+                "rotation": [
+                    -0.0037131866,
+                    -0.07639574,
+                    0.0275583323,
+                    0.996689737
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.8956,
+        "head": {
+            "position": [
+                0.0337955654,
+                1.0146,
+                -0.07215003
+            ],
+            "rotation": [
+                -0.0175261088,
+                0.00402157,
+                -0.03514876,
+                0.9992203
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.314148456,
+                    0.8956688,
+                    0.07312779
+                ],
+                "rotation": [
+                    0.0365011767,
+                    0.217705414,
+                    -0.0284858979,
+                    0.9749156
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.157434583,
+                    0.8877039,
+                    0.100572973
+                ],
+                "rotation": [
+                    0.0131649449,
+                    -0.04083626,
+                    0.02395536,
+                    0.998791933
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 980.951233,
+        "head": {
+            "position": [
+                0.0333433971,
+                1.01477265,
+                -0.07141358
+            ],
+            "rotation": [
+                -0.0182919838,
+                0.004016757,
+                -0.03508464,
+                0.999208868
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.284979373,
+                    0.8884086,
+                    0.07640069
+                ],
+                "rotation": [
+                    0.0446586,
+                    0.2003534,
+                    -0.02564063,
+                    0.9783695
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.140087023,
+                    0.878721833,
+                    0.102370813
+                ],
+                "rotation": [
+                    0.04823301,
+                    -0.0445274673,
+                    0.04429618,
+                    0.9968595
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.0068,
+        "head": {
+            "position": [
+                0.0333652571,
+                1.01444554,
+                -0.07076912
+            ],
+            "rotation": [
+                -0.0179833937,
+                0.004640415,
+                -0.03464975,
+                0.9992269
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.2645872,
+                    0.886989534,
+                    0.07898851
+                ],
+                "rotation": [
+                    0.0578370541,
+                    0.17434,
+                    -0.04648984,
+                    0.981885552
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1319118,
+                    0.876749,
+                    0.104028985
+                ],
+                "rotation": [
+                    0.05338119,
+                    -0.0464270338,
+                    0.0499597937,
+                    0.996242464
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.062256,
+        "head": {
+            "position": [
+                0.0336205252,
+                1.013992,
+                -0.07059915
+            ],
+            "rotation": [
+                -0.0161992367,
+                0.00611396134,
+                -0.03466406,
+                0.999249041
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.252801985,
+                    0.8958198,
+                    0.0809940249
+                ],
+                "rotation": [
+                    0.0608523749,
+                    0.1560718,
+                    -0.069686994,
+                    0.983403444
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1289698,
+                    0.885177135,
+                    0.103149489
+                ],
+                "rotation": [
+                    0.0308124386,
+                    -0.04924559,
+                    0.0390318781,
+                    0.997548
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.1177,
+        "head": {
+            "position": [
+                0.033867,
+                1.01328373,
+                -0.070843026
+            ],
+            "rotation": [
+                -0.0140054151,
+                0.006823495,
+                -0.03431847,
+                0.9992896
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.245704547,
+                    0.9187056,
+                    0.08058627
+                ],
+                "rotation": [
+                    0.027975969,
+                    0.160787746,
+                    -0.06740434,
+                    0.9842872
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.132886738,
+                    0.904142737,
+                    0.1028011
+                ],
+                "rotation": [
+                    0.009255587,
+                    -0.04597437,
+                    0.0555126928,
+                    0.997356057
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.1736,
+        "head": {
+            "position": [
+                0.03332153,
+                1.01277483,
+                -0.0714578
+            ],
+            "rotation": [
+                -0.0119841322,
+                0.00577192,
+                -0.0333918557,
+                0.9993539
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.243082881,
+                    0.951652765,
+                    0.07703565
+                ],
+                "rotation": [
+                    -0.0272056218,
+                    0.149071962,
+                    -0.07278591,
+                    0.985768557
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1381649,
+                    0.932672143,
+                    0.09975236
+                ],
+                "rotation": [
+                    -0.0316753946,
+                    -0.0537493452,
+                    0.05835076,
+                    0.9963448
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.2292,
+        "head": {
+            "position": [
+                0.0323841572,
+                1.01281619,
+                -0.0719627
+            ],
+            "rotation": [
+                -0.0115390532,
+                0.004010588,
+                -0.0313095078,
+                0.9994351
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.242396146,
+                    0.989525557,
+                    0.0705500841
+                ],
+                "rotation": [
+                    -0.07378602,
+                    0.148457572,
+                    -0.09461607,
+                    0.981612861
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.145514429,
+                    0.966453731,
+                    0.09490034
+                ],
+                "rotation": [
+                    -0.0873025,
+                    -0.07511392,
+                    0.0481149964,
+                    0.992180049
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.2848,
+        "head": {
+            "position": [
+                0.03173209,
+                1.01313233,
+                -0.07221866
+            ],
+            "rotation": [
+                -0.0116235847,
+                0.00268563651,
+                -0.028904425,
+                0.999511063
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.239052638,
+                    1.0274123,
+                    0.0579629242
+                ],
+                "rotation": [
+                    -0.149451524,
+                    0.141648635,
+                    -0.0926353,
+                    0.97417593
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.152757332,
+                    0.9993758,
+                    0.0867022
+                ],
+                "rotation": [
+                    -0.132644191,
+                    -0.09424873,
+                    0.06883612,
+                    0.9842684
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.340332,
+        "head": {
+            "position": [
+                0.0310663879,
+                1.01350784,
+                -0.07204969
+            ],
+            "rotation": [
+                -0.0124113895,
+                0.002482593,
+                -0.0275817849,
+                0.999539435
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.235644713,
+                    1.05590534,
+                    0.046379324
+                ],
+                "rotation": [
+                    -0.211069793,
+                    0.141876355,
+                    -0.07909107,
+                    0.96388036
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1554116,
+                    1.02586615,
+                    0.07725234
+                ],
+                "rotation": [
+                    -0.1840161,
+                    -0.112863123,
+                    0.0514507219,
+                    0.9750656
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.3959,
+        "head": {
+            "position": [
+                0.0306959245,
+                1.01390052,
+                -0.07162572
+            ],
+            "rotation": [
+                -0.0132022938,
+                0.00225137174,
+                -0.0262561012,
+                0.9995656
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.232548356,
+                    1.07012415,
+                    0.0394852646
+                ],
+                "rotation": [
+                    -0.242995158,
+                    0.148508176,
+                    -0.06074915,
+                    0.9566652
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.156409875,
+                    1.04059076,
+                    0.07175057
+                ],
+                "rotation": [
+                    -0.2106106,
+                    -0.129503518,
+                    0.039678093,
+                    0.968141437
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.4514,
+        "head": {
+            "position": [
+                0.0299150553,
+                1.01391482,
+                -0.0709681
+            ],
+            "rotation": [
+                -0.0131177008,
+                0.00162754953,
+                -0.0250002313,
+                0.9996001
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.229572922,
+                    1.07037163,
+                    0.0398585275
+                ],
+                "rotation": [
+                    -0.2555742,
+                    0.1411268,
+                    -0.043070294,
+                    0.9554633
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.155104518,
+                    1.04304314,
+                    0.07129202
+                ],
+                "rotation": [
+                    -0.216483265,
+                    -0.123288147,
+                    0.0310052726,
+                    0.967974067
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.5071,
+        "head": {
+            "position": [
+                0.0293963719,
+                1.01367545,
+                -0.0703277
+            ],
+            "rotation": [
+                -0.0125641,
+                0.00131186843,
+                -0.0244976655,
+                0.9996201
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.231174812,
+                    1.05614984,
+                    0.04721027
+                ],
+                "rotation": [
+                    -0.226115376,
+                    0.143224388,
+                    -0.0567426234,
+                    0.961841464
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.154564261,
+                    1.032925,
+                    0.0772126541
+                ],
+                "rotation": [
+                    -0.208543062,
+                    -0.121965639,
+                    0.0261934735,
+                    0.970024765
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.562561,
+        "head": {
+            "position": [
+                0.0290358588,
+                1.01312947,
+                -0.06963741
+            ],
+            "rotation": [
+                -0.01069775,
+                0.00111703575,
+                -0.0239533018,
+                0.999655247
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.231057838,
+                    1.03293753,
+                    0.0567995235
+                ],
+                "rotation": [
+                    -0.18962191,
+                    0.138589635,
+                    -0.0490369573,
+                    0.9707893
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.154130131,
+                    1.0134635,
+                    0.08593938
+                ],
+                "rotation": [
+                    -0.162708879,
+                    -0.122049525,
+                    0.0393921472,
+                    0.9783036
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.618164,
+        "head": {
+            "position": [
+                0.02861168,
+                1.0124054,
+                -0.06901083
+            ],
+            "rotation": [
+                -0.008907672,
+                0.00105321407,
+                -0.0240222756,
+                0.9996712
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.231872708,
+                    1.00318289,
+                    0.06592194
+                ],
+                "rotation": [
+                    -0.145367891,
+                    0.149683565,
+                    -0.050223507,
+                    0.9766989
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.152121037,
+                    0.9899214,
+                    0.09291095
+                ],
+                "rotation": [
+                    -0.135907426,
+                    -0.112799212,
+                    0.03625321,
+                    0.9836114
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.6737,
+        "head": {
+            "position": [
+                0.0283324812,
+                1.01196086,
+                -0.06863316
+            ],
+            "rotation": [
+                -0.007698461,
+                0.0005762428,
+                -0.02329368,
+                0.9996989
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.230261922,
+                    0.970594,
+                    0.07284477
+                ],
+                "rotation": [
+                    -0.09467602,
+                    0.146151081,
+                    -0.0448655039,
+                    0.983698845
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.150527522,
+                    0.9629594,
+                    0.09887864
+                ],
+                "rotation": [
+                    -0.09676142,
+                    -0.113726079,
+                    0.0300221387,
+                    0.9883331
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.7292,
+        "head": {
+            "position": [
+                0.0280275643,
+                1.01141477,
+                -0.06852865
+            ],
+            "rotation": [
+                -0.006125531,
+                0.0003848523,
+                -0.0227517486,
+                0.999722362
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.230448917,
+                    0.939544,
+                    0.077020064
+                ],
+                "rotation": [
+                    -0.0498302132,
+                    0.15978834,
+                    -0.03941934,
+                    0.985104442
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1494971,
+                    0.9387742,
+                    0.101967692
+                ],
+                "rotation": [
+                    -0.05443254,
+                    -0.106087141,
+                    0.0279521,
+                    0.992472351
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.7846,
+        "head": {
+            "position": [
+                0.0282397941,
+                1.010994,
+                -0.06869024
+            ],
+            "rotation": [
+                -0.005091395,
+                0.0004956573,
+                -0.0225827526,
+                0.9997319
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.230442166,
+                    0.916325331,
+                    0.07828875
+                ],
+                "rotation": [
+                    -0.009210623,
+                    0.156477,
+                    -0.04172256,
+                    0.98675704
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.147879317,
+                    0.9219094,
+                    0.101495773
+                ],
+                "rotation": [
+                    -0.0220096055,
+                    -0.102293476,
+                    0.0315119252,
+                    0.994011343
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.8401,
+        "head": {
+            "position": [
+                0.028405644,
+                1.01078963,
+                -0.0690489262
+            ],
+            "rotation": [
+                -0.004299313,
+                7.587671e-05,
+                -0.0227906071,
+                0.999731064
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.232079566,
+                    0.904461145,
+                    0.0784716159
+                ],
+                "rotation": [
+                    0.0140890619,
+                    0.163430944,
+                    -0.05403291,
+                    0.984973252
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.146321833,
+                    0.9129027,
+                    0.101220727
+                ],
+                "rotation": [
+                    -0.0056654145,
+                    -0.09464272,
+                    0.03208699,
+                    0.994977951
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.895447,
+        "head": {
+            "position": [
+                0.0285932217,
+                1.01083589,
+                -0.06986847
+            ],
+            "rotation": [
+                -0.004980847,
+                0.000229880214,
+                -0.0238088686,
+                0.9997041
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.2337045,
+                    0.90399766,
+                    0.08082219
+                ],
+                "rotation": [
+                    0.02141557,
+                    0.162236,
+                    -0.06705928,
+                    0.9842378
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1446758,
+                    0.910735369,
+                    0.103982046
+                ],
+                "rotation": [
+                    -0.000504896743,
+                    -0.08845088,
+                    0.0317241251,
+                    0.99557513
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 981.95105,
+        "head": {
+            "position": [
+                0.0289410278,
+                1.01079285,
+                -0.0713016242
+            ],
+            "rotation": [
+                -0.00712915324,
+                0.0009837002,
+                -0.0251844078,
+                0.999657
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.234206825,
+                    0.9119505,
+                    0.08657205
+                ],
+                "rotation": [
+                    0.005906034,
+                    0.159082681,
+                    -0.06943674,
+                    0.9848027
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.144144148,
+                    0.913268268,
+                    0.11201936
+                ],
+                "rotation": [
+                    -0.006439041,
+                    -0.08501021,
+                    0.03230617,
+                    0.9958354
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.0065,
+        "head": {
+            "position": [
+                0.029345734,
+                1.0117619,
+                -0.0727600753
+            ],
+            "rotation": [
+                -0.0125622023,
+                0.000831738056,
+                -0.02550919,
+                0.999595344
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.235753909,
+                    0.921869457,
+                    0.0961296856
+                ],
+                "rotation": [
+                    -0.0113787754,
+                    0.1600813,
+                    -0.0661492646,
+                    0.984819233
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.144837469,
+                    0.914295852,
+                    0.126632482
+                ],
+                "rotation": [
+                    -0.01283313,
+                    -0.082441926,
+                    0.0310617462,
+                    0.996029
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.062,
+        "head": {
+            "position": [
+                0.0294330716,
+                1.01304007,
+                -0.07369807
+            ],
+            "rotation": [
+                -0.02002677,
+                0.000721886754,
+                -0.0260356162,
+                0.999460161
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.23583059,
+                    0.93147403,
+                    0.108228058
+                ],
+                "rotation": [
+                    -0.025154734,
+                    0.153425172,
+                    -0.06519444,
+                    0.9856864
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1455026,
+                    0.915704668,
+                    0.142576769
+                ],
+                "rotation": [
+                    0.00838894,
+                    -0.0904616639,
+                    0.0418886878,
+                    0.9949833
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.1175,
+        "head": {
+            "position": [
+                0.0293642264,
+                1.01441932,
+                -0.0741764754
+            ],
+            "rotation": [
+                -0.0270130038,
+                0.000866994262,
+                -0.02704094,
+                0.999268949
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.237110779,
+                    0.9396263,
+                    0.120463438
+                ],
+                "rotation": [
+                    -0.03191432,
+                    0.1609769,
+                    -0.07230353,
+                    0.983788669
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.145071164,
+                    0.92109257,
+                    0.1561603
+                ],
+                "rotation": [
+                    0.00564698735,
+                    -0.09130442,
+                    0.04612509,
+                    0.9947383
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.1731,
+        "head": {
+            "position": [
+                0.02904044,
+                1.01565456,
+                -0.07409647
+            ],
+            "rotation": [
+                -0.0322326645,
+                0.0008135588,
+                -0.0279547051,
+                0.9990891
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.237470925,
+                    0.9437843,
+                    0.133512184
+                ],
+                "rotation": [
+                    -0.03333153,
+                    0.154810712,
+                    -0.0634349361,
+                    0.9853419
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.14178963,
+                    0.930136263,
+                    0.1644702
+                ],
+                "rotation": [
+                    -0.00913125649,
+                    -0.07632479,
+                    0.0486429259,
+                    0.995853961
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.22876,
+        "head": {
+            "position": [
+                0.02855888,
+                1.016595,
+                -0.0737979
+            ],
+            "rotation": [
+                -0.0360673554,
+                -0.00117009878,
+                -0.0277571455,
+                0.9989632
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.238633752,
+                    0.9445064,
+                    0.141884878
+                ],
+                "rotation": [
+                    -0.0284789018,
+                    0.17110239,
+                    -0.06360323,
+                    0.9827856
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.141840011,
+                    0.932237864,
+                    0.174801111
+                ],
+                "rotation": [
+                    0.00292000128,
+                    -0.0787507147,
+                    0.0412834734,
+                    0.996034861
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.2843,
+        "head": {
+            "position": [
+                0.027752487,
+                1.01691282,
+                -0.0731884241
+            ],
+            "rotation": [
+                -0.03630141,
+                -0.00203076,
+                -0.02814454,
+                0.9989425
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.2396739,
+                    0.9436478,
+                    0.1454719
+                ],
+                "rotation": [
+                    -0.02664929,
+                    0.171546981,
+                    -0.0612486526,
+                    0.982909
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.142439142,
+                    0.932906568,
+                    0.177685723
+                ],
+                "rotation": [
+                    0.0133863427,
+                    -0.08686723,
+                    0.0462427437,
+                    0.9950561
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.3399,
+        "head": {
+            "position": [
+                0.0274094976,
+                1.01629663,
+                -0.07220136
+            ],
+            "rotation": [
+                -0.03344309,
+                -0.00225086533,
+                -0.0278999079,
+                0.99904865
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.239044353,
+                    0.94179,
+                    0.143511787
+                ],
+                "rotation": [
+                    -0.0267869011,
+                    0.168844849,
+                    -0.0584705658,
+                    0.9835422
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.143714562,
+                    0.9322337,
+                    0.1746853
+                ],
+                "rotation": [
+                    0.00191511831,
+                    -0.08902282,
+                    0.04268212,
+                    0.995112836
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.4093,
+        "head": {
+            "position": [
+                0.02714406,
+                1.01568973,
+                -0.0710927844
+            ],
+            "rotation": [
+                -0.0303059965,
+                -0.00202356279,
+                -0.027520448,
+                0.9991597
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.237992674,
+                    0.939378738,
+                    0.133563831
+                ],
+                "rotation": [
+                    -0.0282193664,
+                    0.161263913,
+                    -0.0604771376,
+                    0.98465234
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.146378547,
+                    0.931013346,
+                    0.1647154
+                ],
+                "rotation": [
+                    0.000372347422,
+                    -0.08636011,
+                    0.04158711,
+                    0.995395541
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.464661,
+        "head": {
+            "position": [
+                0.02686881,
+                1.01499557,
+                -0.07047777
+            ],
+            "rotation": [
+                -0.0259173755,
+                -0.00270189345,
+                -0.0265548453,
+                0.9993077
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.237389609,
+                    0.938462,
+                    0.121698014
+                ],
+                "rotation": [
+                    -0.0333129354,
+                    0.152944282,
+                    -0.05928935,
+                    0.985892057
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.150239661,
+                    0.931298852,
+                    0.152325541
+                ],
+                "rotation": [
+                    -0.0101293763,
+                    -0.08986935,
+                    0.03914855,
+                    0.995132267
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.5205,
+        "head": {
+            "position": [
+                0.0266581867,
+                1.01416588,
+                -0.0700703
+            ],
+            "rotation": [
+                -0.0206066277,
+                -0.00367249548,
+                -0.0249423217,
+                0.999469757
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.237389743,
+                    0.9367843,
+                    0.108399823
+                ],
+                "rotation": [
+                    -0.0381586552,
+                    0.150065184,
+                    -0.0629156157,
+                    0.985934138
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.1551347,
+                    0.930286,
+                    0.13836053
+                ],
+                "rotation": [
+                    -0.0186733343,
+                    -0.0991682559,
+                    0.041061867,
+                    0.994047761
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.5763,
+        "head": {
+            "position": [
+                0.026696438,
+                1.01361918,
+                -0.07002023
+            ],
+            "rotation": [
+                -0.0164641161,
+                -0.003885746,
+                -0.0237157475,
+                0.9995757
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.237934828,
+                    0.9335486,
+                    0.0964206755
+                ],
+                "rotation": [
+                    -0.0346456766,
+                    0.141011924,
+                    -0.0615027659,
+                    0.987488151
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.158275679,
+                    0.926905751,
+                    0.124930464
+                ],
+                "rotation": [
+                    -0.0224342365,
+                    -0.09898556,
+                    0.03273971,
+                    0.9942971
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.632,
+        "head": {
+            "position": [
+                0.02687787,
+                1.01314473,
+                -0.07047514
+            ],
+            "rotation": [
+                -0.0134426253,
+                -0.00354674459,
+                -0.0233379211,
+                0.999631
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.240199834,
+                    0.930230856,
+                    0.08657801
+                ],
+                "rotation": [
+                    -0.03162508,
+                    0.143947631,
+                    -0.06218178,
+                    0.9871233
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.16230689,
+                    0.9216058,
+                    0.113506541
+                ],
+                "rotation": [
+                    -0.0252417549,
+                    -0.109689206,
+                    0.02554614,
+                    0.993316948
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.6876,
+        "head": {
+            "position": [
+                0.0268909261,
+                1.0132724,
+                -0.07119047
+            ],
+            "rotation": [
+                -0.0120685939,
+                -0.00389949977,
+                -0.0223565418,
+                0.9996696
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.243060887,
+                    0.9278729,
+                    0.07944426
+                ],
+                "rotation": [
+                    -0.03032832,
+                    0.146738246,
+                    -0.0607484952,
+                    0.9868423
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.163670272,
+                    0.9151991,
+                    0.104606658
+                ],
+                "rotation": [
+                    -0.01820401,
+                    -0.110447064,
+                    0.0234291051,
+                    0.9934391
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.743164,
+        "head": {
+            "position": [
+                0.0266633872,
+                1.0136838,
+                -0.071958676
+            ],
+            "rotation": [
+                -0.0120918853,
+                -0.004441723,
+                -0.0217049215,
+                0.9996815
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.246379569,
+                    0.926262736,
+                    0.0750031
+                ],
+                "rotation": [
+                    -0.0316584855,
+                    0.153321177,
+                    -0.06572375,
+                    0.985479951
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.163603038,
+                    0.9092069,
+                    0.0985809341
+                ],
+                "rotation": [
+                    -0.0103040431,
+                    -0.109507792,
+                    0.02256023,
+                    0.9936765
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.7989,
+        "head": {
+            "position": [
+                0.026509678,
+                1.0141089,
+                -0.0728216842
+            ],
+            "rotation": [
+                -0.0133384671,
+                -0.004842758,
+                -0.0220754929,
+                0.999655664
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.249141663,
+                    0.9247138,
+                    0.07308636
+                ],
+                "rotation": [
+                    -0.03459202,
+                    0.158502147,
+                    -0.06624242,
+                    0.9845265
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.162002385,
+                    0.9045525,
+                    0.09554151
+                ],
+                "rotation": [
+                    -0.00514369039,
+                    -0.102521412,
+                    0.0184948184,
+                    0.9945456
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "timestamp": 982.8542,
+        "head": {
+            "position": [
+                0.0263143722,
+                1.01456773,
+                -0.07318064
+            ],
+            "rotation": [
+                -0.0151439151,
+                -0.00454838574,
+                -0.0229786746,
+                0.9996109
+            ]
+        },
+        "hands": {
+            "right": {
+                "position": [
+                    0.2508294,
+                    0.9229275,
+                    0.07303012
+                ],
+                "rotation": [
+                    -0.0338425562,
+                    0.156399563,
+                    -0.07160453,
+                    0.984513462
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            "left": {
+                "position": [
+                    -0.160828337,
+                    0.9015258,
+                    0.09468122
+                ],
+                "rotation": [
+                    -0.000857373,
+                    -0.106459588,
+                    0.0162426159,
+                    0.994184
+                ],
+                "buttons": {
+                    "primaryButton": false,
+                    "secondaryButton": false,
+                    "trigger": 0.0,
+                    "grip": 0.0,
+                    "thumbstickButton": false,
+                    "thumbstickAxis": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            }
+        }
+    }
+]
