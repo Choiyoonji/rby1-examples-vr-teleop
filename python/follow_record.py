@@ -2,7 +2,8 @@
 python follow_record.py \
   --local_ip 127.0.0.1 --local_port 6001 \
   --control_ip 127.0.0.1 --control_port 6002 \
-  --rby1 192.168.30.1:50051 --rby1_model a
+  --rby1 192.168.0.83:50051 --rby1_model a \
+  --no_gripper
 """
 
 import argparse
@@ -33,7 +34,6 @@ T_conv = np.array([
 ])
 
 
-@dataclass(frozen=True)
 class Settings:
     dt: float = 0.1  # 10 Hz
     update_dt : float = 0.002   # 500 Hz
@@ -626,6 +626,11 @@ if __name__ == "__main__":
     parser.add_argument("--rby1", default="192.168.30.1:50051", type=str)
     parser.add_argument("--rby1_model", default="a", type=str)
     parser.add_argument("--no_head", action="store_true")
+    parser.add_argument(
+        "--whole_body", action="store_true",
+        help="Use a whole-body optimization formulation (single control for all joints)"
+    )
+
 
     args = parser.parse_args()
     main(args)
