@@ -18,7 +18,7 @@ TARGET_PORT = 6001          # follow_record.py의 local_port
 STATE_PORT  = 6002          # follow_record.py의 control_port
 
 VR_JSON: str = "./vr_data.json"
-SEND_DT: float = 0.05              # 20Hz
+SEND_DT: float = 0.1              # 10Hz
 LOOP_PLAY: bool = False            # 반복 여부
 
 # ---- robot_state 저장 관련 ----
@@ -205,7 +205,7 @@ def main():
                 while not robot_state.get("is_initialized", False):
                     time.sleep(0.1)
                 print("[INFO] Robot initialized! Move enabled.")
-                move_on = True
+                # move_on = True
                 one_shot_ready = False
 
             # 펄스 플래그는 매 프레임 클리어
