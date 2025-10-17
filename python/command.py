@@ -14,7 +14,7 @@ TARGET_IP   = "127.0.0.1"   # follow_record.py의 local_ip
 TARGET_PORT = 6001          # follow_record.py의 local_port
 STATE_PORT  = 6002          # follow_record.py의 control_port
 
-VR_JSON: str = "./vr_data.json"
+VR_JSON: str = "./vr_data_10hz.json"
 SEND_DT: float = 0.05              # 20Hz
 LOOP_PLAY: bool = False            # 반복 여부
 
@@ -95,7 +95,7 @@ def main():
         return
 
     target = (TARGET_IP, TARGET_PORT)
-    print(f"[INFO] Target: {target}, 20 Hz fixed")
+    print(f"[INFO] Target: {target}, 10 Hz fixed")
     print("[INFO] Controls: r=ready, m=move(toggle), s=stop, e=estop, q/ESC=quit")
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

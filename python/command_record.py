@@ -17,7 +17,7 @@ TARGET_IP   = "127.0.0.1"   # follow_record.py의 local_ip
 TARGET_PORT = 6001          # follow_record.py의 local_port
 STATE_PORT  = 6002          # follow_record.py의 control_port
 
-VR_JSON: str = "./vr_data.json"
+VR_JSON: str = "./vr_data_10hz.json"
 SEND_DT: float = 0.1              # 10Hz
 LOOP_PLAY: bool = False            # 반복 여부
 
@@ -203,6 +203,7 @@ def main():
             if one_shot_ready:
                 print("[INFO] Waiting for robot initialization...")
                 while not robot_state.get("is_initialized", False):
+                    print("waiting for initialize")
                     time.sleep(0.1)
                 print("[INFO] Robot initialized! Move enabled.")
                 # move_on = True
@@ -215,6 +216,7 @@ def main():
             # move 활성화 상태에서만 프레임 진행
             if move_on and initialized:
                 idx += 1
+                print(idx)
                 if idx >= len(frames):
                     if LOOP_PLAY:
                         idx = 0

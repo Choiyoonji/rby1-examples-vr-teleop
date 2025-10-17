@@ -36,7 +36,7 @@ T_conv = np.array([
 
 class Settings:
     dt: float = 0.1  # 10 Hz
-    update_dt : float = 0.002   # 500 Hz
+    update_dt : float = 0.01   # 100 Hz
     hand_offset: float = np.array([0.0, 0.0, 0.0])
 
     T_hand_offset = np.identity(4)
@@ -59,7 +59,7 @@ class SystemContext:
 
 
 def robot_state_callback(robot_state: rby.RobotState_A):
-    SystemContext.control_state.timestamp = robot_state.timestamp
+    SystemContext.control_state.timestamp = robot_state.timestamp.timestamp()
     SystemContext.control_state.joint_positions = robot_state.position
     SystemContext.control_state.joint_velocities = robot_state.velocity
     SystemContext.control_state.joint_currents = robot_state.current
@@ -623,7 +623,7 @@ if __name__ == "__main__":
     parser.add_argument("--control_port", required=True, type=int, help="Controller PC port to send robot/state")
 
     parser.add_argument("--no_gripper", action="store_true")
-    parser.add_argument("--rby1", default="192.168.30.1:50051", type=str)
+    parser.add_argument("--rby1", default="192.168.0.83:50051", type=str)
     parser.add_argument("--rby1_model", default="a", type=str)
     parser.add_argument("--no_head", action="store_true")
     parser.add_argument(
