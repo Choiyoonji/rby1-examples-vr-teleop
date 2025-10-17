@@ -6,7 +6,13 @@ import numpy as np
 
 @dataclass(slots=True)
 class ControlState:
+    
+    timestamp: float = 0.0
+
     joint_positions: np.ndarray = field(default_factory=lambda: np.array([]))
+    joint_velocities: np.ndarray = field(default_factory=lambda: np.array([]))
+    joint_currents: np.ndarray = field(default_factory=lambda: np.array([]))
+    joint_torques: np.ndarray = field(default_factory=lambda: np.array([]))
     center_of_mass: np.ndarray = field(default_factory=lambda: np.array([]))
     command: dict = field(default_factory=dict)
 

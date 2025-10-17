@@ -33,7 +33,7 @@ def main():
 
     data_list = []
 
-    dt = 0.05  # 20 Hz
+    dt = 0.1  # 10 Hz
     last_time = time.monotonic()
     next_time = last_time + dt
     is_initialized = False

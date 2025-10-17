@@ -35,7 +35,8 @@ T_conv = np.array([
 
 @dataclass(frozen=True)
 class Settings:
-    dt: float = 0.1
+    dt: float = 0.1  # 10 Hz
+    update_dt : float = 0.002   # 500 Hz
     hand_offset: float = np.array([0.0, 0.0, 0.0])
 
     T_hand_offset = np.identity(4)
@@ -58,7 +59,11 @@ class SystemContext:
 
 
 def robot_state_callback(robot_state: rby.RobotState_A):
+    SystemContext.control_state.timestamp = robot_state.timestamp
     SystemContext.control_state.joint_positions = robot_state.position
+    SystemContext.control_state.joint_velocities = robot_state.velocity
+    SystemContext.control_state.joint_currents = robot_state.current
+    SystemContext.control_state.joint_torques = robot_state.torque
     SystemContext.control_state.center_of_mass = robot_state.center_of_mass
 
 
@@ -108,7 +113,7 @@ def connect_rby1(address: str, model: str = "a", no_head: bool = False):
     logging.info("Control Manager successfully enabled. (Unlimited Mode: enabled)")
 
     SystemContext.robot_model = robot.model()
-    robot.start_state_update(robot_state_callback, 1 / Settings.dt)
+    robot.start_state_update(robot_state_callback, 1 / Settings.update_dt)
 
     return robot
 
@@ -223,7 +228,13 @@ def _nd_to_list(x):
 def pack_state_for_udp():
     cs = SystemContext.control_state
     return {
+        "timestamp": cs.timestamp,
+
         "joint_positions": _nd_to_list(cs.joint_positions),
+        "joint_velocities": _nd_to_list(cs.joint_velocities),
+        "joint_currents": _nd_to_list(cs.joint_currents),
+        "joint_torques": _nd_to_list(cs.joint_torques),
+
         "center_of_mass": _nd_to_list(cs.center_of_mass),
 
         "base_pose": _mat4_to_list(cs.base_pose),
@@ -241,7 +252,7 @@ def pack_state_for_udp():
         "mobile_angular_velocity": cs.mobile_angular_velocity,
     }
 
-def publish_state_udp(control_ip: str, control_port: int, period_s: float = 0.1):
+def publish_state_udp(control_ip: str, control_port: int, period_s: float = 0.002):
     """로봇/컨트롤 상태를 주기적으로 컨트롤 PC에 UDP로 전송."""
     def loop():
         with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as tx:
@@ -281,7 +292,7 @@ def main(args: argparse.Namespace):
                                power_off=lambda: robot.power_off(".*"))
 
     # 상태 송신(본 프로세스 -> 컨트롤러)
-    publish_state_udp(Settings.control_ip, Settings.control_port, period_s=Settings.dt)
+    publish_state_udp(Settings.control_ip, Settings.control_port, period_s=Settings.update_dt)
 
     gripper = None
     if not args.no_gripper:
