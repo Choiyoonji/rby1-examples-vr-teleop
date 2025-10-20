@@ -23,6 +23,7 @@ def load_joint_trajectories(robot_data):
                 'timestamp': frame['timestamp'],
                 'joint_positions': np.array(frame['joint_positions']),
                 'right_target_ee': np.array(frame['right_target_ee']),
+                'left_target_ee': np.array(frame['left_target_ee']),
             })
     return joint_trajectories
 
@@ -75,14 +76,14 @@ def plot_ee_pos_trajectory(joint_trajectories, rby1_dyn):
     for frame in joint_trajectories:
         joint_positions = frame['joint_positions']
         fk_results = rby1_dyn.get_fk(joint_positions)
-        right_ee_transform = fk_results['link_right_arm_6']
-        ee_pos = right_ee_transform[:3, 3]  # 위치 추출
+        left_ee_transform = fk_results['link_left_arm_6']
+        ee_pos = left_ee_transform[:3, 3]  # 위치 추출
         ee_positions['x'].append(ee_pos[0])
         ee_positions['y'].append(ee_pos[1])
         ee_positions['z'].append(ee_pos[2])
-        ee_positions['x_t'].append(frame['right_target_ee'][0, 3])
-        ee_positions['y_t'].append(frame['right_target_ee'][1, 3])
-        ee_positions['z_t'].append(frame['right_target_ee'][2, 3])
+        ee_positions['x_t'].append(frame['left_target_ee'][0, 3])
+        ee_positions['y_t'].append(frame['left_target_ee'][1, 3])
+        ee_positions['z_t'].append(frame['left_target_ee'][2, 3])
 
     plt.figure(figsize=(12, 8))
     for axis in ['x', 'y', 'z', 'x_t', 'y_t', 'z_t']:
@@ -96,7 +97,7 @@ def plot_ee_pos_trajectory(joint_trajectories, rby1_dyn):
 
 if __name__ == "__main__":
     rby1_dyn = RBY1Dyn()
-    file_path = "/home/choiyj/rby1-examples-vr-teleop/python/logs/robot_state_20251020_142558.jsonl"  # 경로를 실제 파일 경로로 변경
+    file_path = "/home/choiyj/rby1-examples-vr-teleop/python/logs/robot_state_20251020_191637.jsonl"  # 경로를 실제 파일 경로로 변경
     robot_data = load_json_lines_file(file_path)
 
     joint_trajectories = load_joint_trajectories(robot_data)
