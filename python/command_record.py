@@ -206,7 +206,7 @@ def main():
                     print("waiting for initialize")
                     time.sleep(0.1)
                 print("[INFO] Robot initialized! Move enabled.")
-                # move_on = True
+                move_on = True
                 one_shot_ready = False
 
             # 펄스 플래그는 매 프레임 클리어
