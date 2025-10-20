@@ -64,6 +64,10 @@ def robot_state_callback(robot_state: rby.RobotState_A):
     SystemContext.control_state.joint_velocities = robot_state.velocity
     SystemContext.control_state.joint_currents = robot_state.current
     SystemContext.control_state.joint_torques = robot_state.torque
+    SystemContext.control_state.right_force_sensor = robot_state.ft_sensor_right.force
+    SystemContext.control_state.left_force_sensor = robot_state.ft_sensor_left.force
+    SystemContext.control_state.right_torque_sensor = robot_state.ft_sensor_right.torque
+    SystemContext.control_state.left_torque_sensor = robot_state.ft_sensor_left.torque
     SystemContext.control_state.center_of_mass = robot_state.center_of_mass
 
 
