@@ -482,9 +482,9 @@ def main(args: argparse.Namespace):
                     # T = np.identity(4)
                     # T[:3, :3] = SystemContext.control_state.right_ee_start_pose[:3, :3]
                     # right_T = SystemContext.control_state.right_ee_start_pose @ diff_global
-                    diff_x = np.sin(cnt) * 0.05
-                    diff_y = np.sin(cnt) * 0.05
-                    diff_z = np.sin(cnt) * 0.05
+                    diff_x = np.sin(cnt) * 0.1
+                    diff_y = np.sin(cnt) * 0.1
+                    diff_z = np.sin(cnt) * 0.1
                     diff_global = np.identity(4)
                     diff_global[0, 3] = diff_x
                     diff_global[1, 3] = diff_y
@@ -506,9 +506,9 @@ def main(args: argparse.Namespace):
                     # T = np.identity(4)
                     # T[:3, :3] = SystemContext.control_state.left_ee_start_pose[:3, :3]
                     # left_T = SystemContext.control_state.left_ee_start_pose @ diff_global
-                    diff_x = np.sin(cnt) * 0.05
-                    diff_y = np.sin(cnt) * 0.05
-                    diff_z = np.sin(cnt) * 0.05
+                    diff_x = np.sin(cnt) * 0.1
+                    diff_y = np.sin(cnt) * 0.1
+                    diff_z = np.sin(cnt) * 0.1
                     diff_global = np.identity(4)
                     diff_global[0, 3] = diff_x
                     diff_global[1, 3] = diff_y
