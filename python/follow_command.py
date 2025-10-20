@@ -1,5 +1,5 @@
 """
-python follow_record.py \
+python follow_command.py \
   --local_ip 127.0.0.1 --local_port 6001 \
   --control_ip 127.0.0.1 --control_port 6002 \
   --rby1 192.168.0.83:50051 --rby1_model a \
@@ -246,6 +246,9 @@ def pack_state_for_udp():
         "right_ee_current_pose": _mat4_to_list(cs.right_ee_current_pose),
         "left_ee_current_pose": _mat4_to_list(cs.left_ee_current_pose),
 
+        "right_target_ee": _mat4_to_list(cs.right_arm_locked_pose),
+        "left_target_ee": _mat4_to_list(cs.left_arm_locked_pose),
+
         "is_initialized": cs.is_initialized,
         "is_stopped": cs.is_stopped,
         "is_right_following": cs.is_right_following,
@@ -470,38 +473,31 @@ def main(args: argparse.Namespace):
                     diff = np.linalg.inv(
                         SystemContext.control_state.right_command_start_pose) @ SystemContext.control_state.right_command_current_pose
 
-                    # Convert the difference to the global frame
-                    T_global2start = np.identity(4)
-                    T_global2start[:3, :3] = R.from_euler('y', 90, degrees=True).as_matrix() # Align axis
-                    diff_global = T_global2start @ diff @ T_global2start.T
-
                     T = np.identity(4)
                     T[:3, :3] = SystemContext.control_state.right_ee_start_pose[:3, :3]
-                    right_T = SystemContext.control_state.right_ee_start_pose @ diff_global
+                    right_T = SystemContext.control_state.right_ee_start_pose @ diff
                     SystemContext.control_state.right_arm_locked_pose = right_T
                 else:
                     right_T = SystemContext.control_state.right_arm_locked_pose
 
                 if SystemContext.control_state.is_left_following:
+                    # Compute the difference between the current and starting controller poses
+                    # current = diff @ start -> diff = inv(start) @ current
                     diff = np.linalg.inv(
                         SystemContext.control_state.left_command_start_pose) @ SystemContext.control_state.left_command_current_pose
 
-                    T_global2start = np.identity(4)
-                    T_global2start[:3, :3] = R.from_euler('y', 90, degrees=True).as_matrix()
-                    diff_global = T_global2start @ diff @ T_global2start.T
-
                     T = np.identity(4)
                     T[:3, :3] = SystemContext.control_state.left_ee_start_pose[:3, :3]
-                    left_T = SystemContext.control_state.left_ee_start_pose @ diff_global
+                    left_T = SystemContext.control_state.left_ee_start_pose @ diff
                     SystemContext.control_state.left_arm_locked_pose = left_T
                 else:
                     left_T = SystemContext.control_state.left_arm_locked_pose
 
                 if SystemContext.control_state.is_torso_following:
-                    print('a')
+                    # Compute the difference between the current and starting controller poses
+                    # current = diff @ start -> diff = inv(start) @ current
                     diff = np.linalg.inv(
                         SystemContext.control_state.head_command_start_pose) @ SystemContext.control_state.head_command_current_pose
-                    print(SystemContext.control_state.head_command_start_pose)
 
                     T = np.identity(4)
                     T[:3, :3] = SystemContext.control_state.torso_start_pose[:3, :3]
@@ -621,10 +617,10 @@ def main(args: argparse.Namespace):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="RB-Y1 Controller-Follow (UDP I/O)")
-    parser.add_argument("--local_ip",   required=True, type=str, help="This PC bind IP for receiving controller commands")
-    parser.add_argument("--local_port", required=True, type=int, help="UDP port to bind for controller commands")
-    parser.add_argument("--control_ip", required=True, type=str, help="Controller PC IP to send robot/state")
-    parser.add_argument("--control_port", required=True, type=int, help="Controller PC port to send robot/state")
+    parser.add_argument("--local_ip",   default="127.0.0.1", type=str, help="This PC bind IP for receiving controller commands")
+    parser.add_argument("--local_port", default=6001, type=int, help="UDP port to bind for controller commands")
+    parser.add_argument("--control_ip", default="127.0.0.1", type=str, help="Controller PC IP to send robot/state")
+    parser.add_argument("--control_port", default=6002, type=int, help="Controller PC port to send robot/state")
 
     parser.add_argument("--no_gripper", action="store_true")
     parser.add_argument("--rby1", default="192.168.0.83:50051", type=str)
@@ -634,7 +630,6 @@ if __name__ == "__main__":
         "--whole_body", action="store_true",
         help="Use a whole-body optimization formulation (single control for all joints)"
     )
-
 
     args = parser.parse_args()
     main(args)
